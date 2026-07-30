@@ -38,7 +38,7 @@ module webserver_cpu_top #(
   //============================================================================
   // 参数
   //============================================================================
-  localparam lcpu_type       = "xilinx";
+  localparam lcpu_type       = "uart";
   localparam uart_baud_rate  = 115200;
   localparam riscv_inst_en   = 1;
   localparam instr_databits  = 32;
@@ -174,14 +174,6 @@ module webserver_cpu_top #(
   wire [15:0] pram_addr;
   wire [31:0] pram_wdata;
   wire [31:0] pram_rdata;
-
-  // MDIO sub-bus (lcpu_fpga_test → lcpu_mdio)
-  wire        mdio_sb_req;
-  wire        mdio_sb_rhwl;
-  wire [11:0] mdio_sb_addr;
-  wire [31:0] mdio_sb_wdata;
-  wire [31:0] mdio_sb_rdata;
-  wire        mdio_sb_ack;
 
   // RISC-V 复位
   wire [0:0]  riscv_reset_l;
@@ -380,30 +372,12 @@ module webserver_cpu_top #(
       .cpu_wr_wdata                 (fpga_cpu_wr_wdata),
       .cpu_wr_wpkt_len              (fpga_cpu_wr_wpkt_len),
       .cpu_wr_wpkt_push             (fpga_cpu_wr_wpkt_push),
-      .cpu_wr_wpkt_push_ind         (cpu_wr_wpkt_push_ind),
-      // MDIO sub-bus
-      .SUBBUS_mdio_Req              (mdio_sb_req),
-      .SUBBUS_mdio_RhWl             (mdio_sb_rhwl),
-      .SUBBUS_mdio_ReqAddr          (mdio_sb_addr),
-      .SUBBUS_mdio_DataWr           (mdio_sb_wdata),
-      .SUBBUS_mdio_RdData           (mdio_sb_rdata),
-      .SUBBUS_mdio_Ack              (mdio_sb_ack)
-  );
+      .cpu_wr_wpkt_push_ind         (cpu_wr_wpkt_push_ind),  );
 
   //============================================================================
-  // 7. lcpu_mdio — MDIO Clause 22 PHY 管理
+  // MDIO — not yet connected (PHY auto-negotiates on its own)
   //============================================================================
-  lcpu_mdio u_mdio (
-      .reset_l    (reset_l),
-      .clk        (clk_50m),
-      .op_req     (mdio_sb_req),
-      .wrl_rdh    (mdio_sb_rhwl),
-      .wrdata     (mdio_sb_wdata),
-      .address    ({20'd0, mdio_sb_addr}),
-      .op_ack     (mdio_sb_ack),
-      .rddata     (mdio_sb_rdata),
-      .mdc        (Eth0_MDC),
-      .mdio       (Eth0_MDIO)
-  );
+  assign Eth0_MDC  = 1'b0;
+  assign Eth0_MDIO = 1'bz;
 
 endmodule

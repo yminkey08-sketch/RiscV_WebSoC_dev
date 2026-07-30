@@ -1,5 +1,5 @@
 namespace eval ::optrace {
-  variable script "/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/build_xilinx/RiscV_WebSoC.runs/impl_1/webserver_cpu_top.tcl"
+  variable script "/home/minkey/work/RiscV_WebSoC_v1/RiscV_WebSoC/build_xilinx/RiscV_WebSoC.runs/impl_1/webserver_cpu_top.tcl"
   variable category "vivado_impl"
 }
 
@@ -105,24 +105,24 @@ set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
   set_param chipscope.maxJobs 4
-  set_param runs.launchOptions { -jobs 8  }
+  set_param runs.launchOptions { -jobs 16  }
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xc7a35tfgg484-2
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
 OPTRACE "create in-memory project" END { }
 OPTRACE "set parameters" START { }
-  set_property webtalk.parent_dir /home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/build_xilinx/RiscV_WebSoC.cache/wt [current_project]
-  set_property parent.project_path /home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/build_xilinx/RiscV_WebSoC.xpr [current_project]
-  set_property ip_output_repo /home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/build_xilinx/RiscV_WebSoC.cache/ip [current_project]
+  set_property webtalk.parent_dir /home/minkey/work/RiscV_WebSoC_v1/RiscV_WebSoC/build_xilinx/RiscV_WebSoC.cache/wt [current_project]
+  set_property parent.project_path /home/minkey/work/RiscV_WebSoC_v1/RiscV_WebSoC/build_xilinx/RiscV_WebSoC.xpr [current_project]
+  set_property ip_output_repo /home/minkey/work/RiscV_WebSoC_v1/RiscV_WebSoC/build_xilinx/RiscV_WebSoC.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES XPM_MEMORY [current_project]
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
-  add_files -quiet /home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/build_xilinx/RiscV_WebSoC.runs/synth_1/webserver_cpu_top.dcp
+  add_files -quiet /home/minkey/work/RiscV_WebSoC_v1/RiscV_WebSoC/build_xilinx/RiscV_WebSoC.runs/synth_1/webserver_cpu_top.dcp
 OPTRACE "read constraints: implementation" START { }
-  read_xdc /home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/build_xilinx/pins.xdc
-  read_xdc /home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/build_xilinx/timing.xdc
+  read_xdc /home/minkey/work/RiscV_WebSoC_v1/RiscV_WebSoC/build_xilinx/pins.xdc
+  read_xdc /home/minkey/work/RiscV_WebSoC_v1/RiscV_WebSoC/build_xilinx/timing.xdc
 OPTRACE "read constraints: implementation" END { }
 OPTRACE "read constraints: implementation_pre" START { }
 OPTRACE "read constraints: implementation_pre" END { }

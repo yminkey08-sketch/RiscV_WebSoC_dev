@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/build_xilinx/RiscV_WebSoC.runs/synth_1/webserver_cpu_top.tcl"
+  variable script "/home/minkey/work/RiscV_WebSoC_v1/RiscV_WebSoC/build_xilinx/RiscV_WebSoC.runs/synth_1/webserver_cpu_top.tcl"
   variable category "vivado_synth"
 }
 
@@ -56,64 +56,66 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param chipscope.maxJobs 4
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a35tfgg484-2
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir /home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/build_xilinx/RiscV_WebSoC.cache/wt [current_project]
-set_property parent.project_path /home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/build_xilinx/RiscV_WebSoC.xpr [current_project]
+set_property webtalk.parent_dir /home/minkey/work/RiscV_WebSoC_v1/RiscV_WebSoC/build_xilinx/RiscV_WebSoC.cache/wt [current_project]
+set_property parent.project_path /home/minkey/work/RiscV_WebSoC_v1/RiscV_WebSoC/build_xilinx/RiscV_WebSoC.xpr [current_project]
 set_property XPM_LIBRARIES XPM_MEMORY [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
+set_property ip_output_repo /home/minkey/work/RiscV_WebSoC_v1/RiscV_WebSoC/build_xilinx/RiscV_WebSoC.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib -sv {
-  /home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/axi2lcpu.v
-  /home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/clock_frequency_divider.v
-  /home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/cpu_channel.v
-  /home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/crc.v
-  /home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/define.sv
-  /home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/dual_clock_fifo.v
-  /home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/dual_clock_simple_dual_port_ram.v
-  /home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/eth_presemble.v
-  /home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/fix_delay.v
-  /home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/fpga_build_time.v
-  /home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/gmii2mac.v
-  /home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/gmii_to_rgmii.v
-  /home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/jtag_cpu_xilinx.v
-  /home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/lcpu_fpga_test.v
-  /home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/lcpu_merge.v
-  /home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/lcpu_riscv_wrapper.v
-  /home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/lcpu_top.v
-  /home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/mac_rx.v
-  /home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/mac_top.v
-  /home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/mac_tx.v
-  /home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/mmcm_50_125.v
-  /home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/package_fifo_v2.v
-  /home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/picorv32.v
-  /home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/pktfifo2ram_int_v2.v
-  /home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/pulse_clock_region_pass.v
-  /home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/ram2pktfifo_int.v
-  /home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/ramintf.v
-  /home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/rgmii_gmii_bridge.v
-  /home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/rgmii_to_gmii.v
-  /home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/riscv32_localbus.v
-  /home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/riscv32_top.v
-  /home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/riscv32intfbridge.v
-  /home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/riscv_reg.v
-  /home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/single_clock_fifo.v
-  /home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/single_clock_simple_dual_port_ram.v
-  /home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/single_clock_true_dual_port_ram.v
-  /home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/sop_eop_gen.v
-  /home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/uart.v
-  /home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/uart_lcpu.v
-  /home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/uart_lcpu_top.v
-  /home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/uart_rx.v
-  /home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/uart_tx.v
-  /home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/webserver_cpu_top.v
+  /home/minkey/work/RiscV_WebSoC_v1/RiscV_WebSoC/rtl/axi2lcpu.v
+  /home/minkey/work/RiscV_WebSoC_v1/RiscV_WebSoC/rtl/clock_frequency_divider.v
+  /home/minkey/work/RiscV_WebSoC_v1/RiscV_WebSoC/rtl/cpu_channel.v
+  /home/minkey/work/RiscV_WebSoC_v1/RiscV_WebSoC/rtl/crc.v
+  /home/minkey/work/RiscV_WebSoC_v1/RiscV_WebSoC/rtl/define.sv
+  /home/minkey/work/RiscV_WebSoC_v1/RiscV_WebSoC/rtl/dual_clock_fifo.v
+  /home/minkey/work/RiscV_WebSoC_v1/RiscV_WebSoC/rtl/dual_clock_simple_dual_port_ram.v
+  /home/minkey/work/RiscV_WebSoC_v1/RiscV_WebSoC/rtl/eth_presemble.v
+  /home/minkey/work/RiscV_WebSoC_v1/RiscV_WebSoC/rtl/fix_delay.v
+  /home/minkey/work/RiscV_WebSoC_v1/RiscV_WebSoC/rtl/fpga_build_time.v
+  /home/minkey/work/RiscV_WebSoC_v1/RiscV_WebSoC/rtl/gmii2mac.v
+  /home/minkey/work/RiscV_WebSoC_v1/RiscV_WebSoC/rtl/gmii_to_rgmii.v
+  /home/minkey/work/RiscV_WebSoC_v1/RiscV_WebSoC/rtl/jtag_cpu_xilinx.v
+  /home/minkey/work/RiscV_WebSoC_v1/RiscV_WebSoC/rtl/lcpu_fpga_test.v
+  /home/minkey/work/RiscV_WebSoC_v1/RiscV_WebSoC/rtl/lcpu_merge.v
+  /home/minkey/work/RiscV_WebSoC_v1/RiscV_WebSoC/rtl/lcpu_riscv_wrapper.v
+  /home/minkey/work/RiscV_WebSoC_v1/RiscV_WebSoC/rtl/lcpu_top.v
+  /home/minkey/work/RiscV_WebSoC_v1/RiscV_WebSoC/rtl/mac_rx.v
+  /home/minkey/work/RiscV_WebSoC_v1/RiscV_WebSoC/rtl/mac_top.v
+  /home/minkey/work/RiscV_WebSoC_v1/RiscV_WebSoC/rtl/mac_tx.v
+  /home/minkey/work/RiscV_WebSoC_v1/RiscV_WebSoC/rtl/mmcm_50_125.v
+  /home/minkey/work/RiscV_WebSoC_v1/RiscV_WebSoC/rtl/package_fifo_v2.v
+  /home/minkey/work/RiscV_WebSoC_v1/RiscV_WebSoC/rtl/picorv32.v
+  /home/minkey/work/RiscV_WebSoC_v1/RiscV_WebSoC/rtl/pktfifo2ram_int_v2.v
+  /home/minkey/work/RiscV_WebSoC_v1/RiscV_WebSoC/rtl/pulse_clock_region_pass.v
+  /home/minkey/work/RiscV_WebSoC_v1/RiscV_WebSoC/rtl/ram2pktfifo_int.v
+  /home/minkey/work/RiscV_WebSoC_v1/RiscV_WebSoC/rtl/ramintf.v
+  /home/minkey/work/RiscV_WebSoC_v1/RiscV_WebSoC/rtl/rgmii_gmii_bridge.v
+  /home/minkey/work/RiscV_WebSoC_v1/RiscV_WebSoC/rtl/rgmii_to_gmii.v
+  /home/minkey/work/RiscV_WebSoC_v1/RiscV_WebSoC/rtl/riscv32_localbus.v
+  /home/minkey/work/RiscV_WebSoC_v1/RiscV_WebSoC/rtl/riscv32_top.v
+  /home/minkey/work/RiscV_WebSoC_v1/RiscV_WebSoC/rtl/riscv32intfbridge.v
+  /home/minkey/work/RiscV_WebSoC_v1/RiscV_WebSoC/rtl/riscv_reg.v
+  /home/minkey/work/RiscV_WebSoC_v1/RiscV_WebSoC/rtl/single_clock_fifo.v
+  /home/minkey/work/RiscV_WebSoC_v1/RiscV_WebSoC/rtl/single_clock_simple_dual_port_ram.v
+  /home/minkey/work/RiscV_WebSoC_v1/RiscV_WebSoC/rtl/single_clock_true_dual_port_ram.v
+  /home/minkey/work/RiscV_WebSoC_v1/RiscV_WebSoC/rtl/sop_eop_gen.v
+  /home/minkey/work/RiscV_WebSoC_v1/RiscV_WebSoC/rtl/uart.v
+  /home/minkey/work/RiscV_WebSoC_v1/RiscV_WebSoC/rtl/uart_lcpu.v
+  /home/minkey/work/RiscV_WebSoC_v1/RiscV_WebSoC/rtl/uart_lcpu_top.v
+  /home/minkey/work/RiscV_WebSoC_v1/RiscV_WebSoC/rtl/uart_rx.v
+  /home/minkey/work/RiscV_WebSoC_v1/RiscV_WebSoC/rtl/uart_tx.v
+  /home/minkey/work/RiscV_WebSoC_v1/RiscV_WebSoC/rtl/webserver_cpu_top.v
 }
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -124,13 +126,15 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc /home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/build_xilinx/pins.xdc
-set_property used_in_implementation false [get_files /home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/build_xilinx/pins.xdc]
+read_xdc /home/minkey/work/RiscV_WebSoC_v1/RiscV_WebSoC/build_xilinx/pins.xdc
+set_property used_in_implementation false [get_files /home/minkey/work/RiscV_WebSoC_v1/RiscV_WebSoC/build_xilinx/pins.xdc]
 
-read_xdc /home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/build_xilinx/timing.xdc
-set_property used_in_implementation false [get_files /home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/build_xilinx/timing.xdc]
+read_xdc /home/minkey/work/RiscV_WebSoC_v1/RiscV_WebSoC/build_xilinx/timing.xdc
+set_property used_in_implementation false [get_files /home/minkey/work/RiscV_WebSoC_v1/RiscV_WebSoC/build_xilinx/timing.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
+
+read_checkpoint -auto_incremental -incremental /home/minkey/work/RiscV_WebSoC_v1/RiscV_WebSoC/build_xilinx/RiscV_WebSoC.srcs/utils_1/imports/synth_1/webserver_cpu_top.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }

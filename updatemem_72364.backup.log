@@ -1,0 +1,33 @@
+#-----------------------------------------------------------
+# updatemem v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Thu Jul 30 13:24:23 2026
+# Process ID: 72364
+# Current directory: /home/minkey/work/RiscV_WebSoC_v1/RiscV_WebSoC
+# Command line: updatemem -mode batch -source /home/xilinx/Vivado/2024.1/scripts/updatemem/main.tcl -notrace -tclargs -meminfo /home/minkey/work/RiscV_WebSoC_v1/firmware.mmi -data /home/minkey/work/firmware_b3.mem -proc u_riscv/riscv_cpu_generation.u_riscv_cpu/u_instru_ram/gen_xilinx_xpm_tdpram.xpm_bank[3].u_xpm_memory_tdpram_bank/xpm_memory_base_inst -bit /home/minkey/work/fw_final.bit -out /home/minkey/work/fw_final.bit -force
+# Log file: /home/minkey/work/RiscV_WebSoC_v1/RiscV_WebSoC/updatemem.log
+# Journal file: /home/minkey/work/RiscV_WebSoC_v1/RiscV_WebSoC/updatemem.jou
+# Running On        :minkey-pc
+# Platform          :Ubuntu
+# Operating System  :Ubuntu 26.04 LTS
+# Processor Detail  :AMD Ryzen 7 6800H with Radeon Graphics
+# CPU Frequency     :1095.838 MHz
+# CPU Physical cores:8
+# CPU Logical cores :16
+# Host memory       :15423 MB
+# Swap memory       :4294 MB
+# Total Virtual     :19718 MB
+# Available Virtual :11864 MB
+#-----------------------------------------------------------
+source /home/xilinx/Vivado/2024.1/scripts/updatemem/main.tcl -notrace
+Command: update_mem -meminfo /home/minkey/work/RiscV_WebSoC_v1/firmware.mmi -data /home/minkey/work/firmware_b3.mem -proc {u_riscv/riscv_cpu_generation.u_riscv_cpu/u_instru_ram/gen_xilinx_xpm_tdpram.xpm_bank[3].u_xpm_memory_tdpram_bank/xpm_memory_base_inst} -bit /home/minkey/work/fw_final.bit -out /home/minkey/work/fw_final.bit -force
+Loading bitfile /home/minkey/work/fw_final.bit
+Loading data files...
+Updating memory content...
+Creating bitstream...
+Writing bitstream /home/minkey/work/fw_final.bit...
+0 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+update_mem completed successfully
+INFO: [Common 17-206] Exiting updatemem at Thu Jul 30 13:24:28 2026...

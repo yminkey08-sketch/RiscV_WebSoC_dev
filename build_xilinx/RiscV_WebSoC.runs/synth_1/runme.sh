@@ -8,9 +8,9 @@
 # 
 
 if [ -z "$PATH" ]; then
-  PATH=/home/haitaoz/Xilinx/2024.1/Vitis/2024.1/bin:/home/haitaoz/Xilinx/2024.1/Vivado/2024.1/ids_lite/ISE/bin/lin64:/home/haitaoz/Xilinx/2024.1/Vivado/2024.1/bin
+  PATH=/home/xilinx/Vitis/2024.1/bin:/home/xilinx/Vivado/2024.1/ids_lite/ISE/bin/lin64:/home/xilinx/Vivado/2024.1/bin
 else
-  PATH=/home/haitaoz/Xilinx/2024.1/Vitis/2024.1/bin:/home/haitaoz/Xilinx/2024.1/Vivado/2024.1/ids_lite/ISE/bin/lin64:/home/haitaoz/Xilinx/2024.1/Vivado/2024.1/bin:$PATH
+  PATH=/home/xilinx/Vitis/2024.1/bin:/home/xilinx/Vivado/2024.1/ids_lite/ISE/bin/lin64:/home/xilinx/Vivado/2024.1/bin:$PATH
 fi
 export PATH
 
@@ -21,7 +21,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/build_xilinx/RiscV_WebSoC.runs/synth_1'
+HD_PWD='/home/minkey/work/RiscV_WebSoC_v1/RiscV_WebSoC/build_xilinx/RiscV_WebSoC.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

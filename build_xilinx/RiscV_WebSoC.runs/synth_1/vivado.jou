@@ -3,22 +3,22 @@
 # SW Build 5076996 on Wed May 22 18:36:09 MDT 2024
 # IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
 # SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-# Start of session at: Tue Jul 28 09:10:32 2026
-# Process ID: 228915
-# Current directory: /home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/build_xilinx/RiscV_WebSoC.runs/synth_1
+# Start of session at: Thu Jul 30 12:26:16 2026
+# Process ID: 60123
+# Current directory: /home/minkey/work/RiscV_WebSoC_v1/RiscV_WebSoC/build_xilinx/RiscV_WebSoC.runs/synth_1
 # Command line: vivado -log webserver_cpu_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source webserver_cpu_top.tcl
-# Log file: /home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/build_xilinx/RiscV_WebSoC.runs/synth_1/webserver_cpu_top.vds
-# Journal file: /home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/build_xilinx/RiscV_WebSoC.runs/synth_1/vivado.jou
-# Running On        :haitaoz-pc
+# Log file: /home/minkey/work/RiscV_WebSoC_v1/RiscV_WebSoC/build_xilinx/RiscV_WebSoC.runs/synth_1/webserver_cpu_top.vds
+# Journal file: /home/minkey/work/RiscV_WebSoC_v1/RiscV_WebSoC/build_xilinx/RiscV_WebSoC.runs/synth_1/vivado.jou
+# Running On        :minkey-pc
 # Platform          :Ubuntu
 # Operating System  :Ubuntu 26.04 LTS
-# Processor Detail  :AMD Ryzen 7 5800H with Radeon Graphics
-# CPU Frequency     :3392.447 MHz
+# Processor Detail  :AMD Ryzen 7 6800H with Radeon Graphics
+# CPU Frequency     :4339.497 MHz
 # CPU Physical cores:8
 # CPU Logical cores :16
-# Host memory       :13954 MB
+# Host memory       :15423 MB
 # Swap memory       :4294 MB
-# Total Virtual     :18249 MB
-# Available Virtual :12413 MB
+# Total Virtual     :19718 MB
+# Available Virtual :13078 MB
 #-----------------------------------------------------------
 source webserver_cpu_top.tcl -notrace
