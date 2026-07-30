@@ -1,0 +1,1097 @@
+
+*** Running vivado
+    with args -log webserver_cpu_top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source webserver_cpu_top.tcl
+
+
+****** Vivado v2024.1 (64-bit)
+  **** SW Build 5076996 on Wed May 22 18:36:09 MDT 2024
+  **** IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+  **** SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+  **** Start of session at: Tue Jul 28 09:10:32 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source webserver_cpu_top.tcl -notrace
+Command: synth_design -top webserver_cpu_top -part xc7a35tfgg484-2
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tfgg484-2
+INFO: [Device 21-9227] Part: xc7a35tfgg484-2 does not have CEAM library.
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 229008
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2212.676 ; gain = 419.746 ; free physical = 4620 ; free virtual = 10422
+---------------------------------------------------------------------------------
+INFO: [Synth 8-11241] undeclared symbol 'rx_byte_cnt', assumed default net type 'wire' [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/cpu_channel.v:105]
+WARNING: [Synth 8-11065] parameter 'ram_latency_cycles' becomes localparam in 'ramintf' with formal parameter declaration list [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/ramintf.v:21]
+INFO: [Synth 8-6157] synthesizing module 'webserver_cpu_top' [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/webserver_cpu_top.v:8]
+INFO: [Synth 8-6157] synthesizing module 'mmcm_50_125' [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/mmcm_50_125.v:21]
+INFO: [Synth 8-6157] synthesizing module 'MMCME2_BASE' [/home/haitaoz/Xilinx/2024.1/Vivado/2024.1/scripts/rt/data/unisim_comp.v:82508]
+	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
+	Parameter CLKFBOUT_MULT_F bound to: 20.000000 - type: double 
+	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKIN1_PERIOD bound to: 20.000000 - type: double 
+	Parameter CLKOUT0_DIVIDE_F bound to: 8.000000 - type: double 
+	Parameter CLKOUT0_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT0_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKOUT1_DIVIDE bound to: 5 - type: integer 
+	Parameter CLKOUT1_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT1_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKOUT2_DIVIDE bound to: 8 - type: integer 
+	Parameter CLKOUT2_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT2_PHASE bound to: 90.000000 - type: double 
+	Parameter CLKOUT3_DIVIDE bound to: 20 - type: integer 
+	Parameter CLKOUT3_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT3_PHASE bound to: 0.000000 - type: double 
+	Parameter DIVCLK_DIVIDE bound to: 1 - type: integer 
+	Parameter REF_JITTER1 bound to: 0.010000 - type: double 
+	Parameter STARTUP_WAIT bound to: FALSE - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'MMCME2_BASE' (0#1) [/home/haitaoz/Xilinx/2024.1/Vivado/2024.1/scripts/rt/data/unisim_comp.v:82508]
+WARNING: [Synth 8-7071] port 'CLKFBOUTB' of module 'MMCME2_BASE' is unconnected for instance 'u_mmcm' [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/mmcm_50_125.v:79]
+WARNING: [Synth 8-7071] port 'CLKOUT0B' of module 'MMCME2_BASE' is unconnected for instance 'u_mmcm' [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/mmcm_50_125.v:79]
+WARNING: [Synth 8-7071] port 'CLKOUT1B' of module 'MMCME2_BASE' is unconnected for instance 'u_mmcm' [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/mmcm_50_125.v:79]
+WARNING: [Synth 8-7071] port 'CLKOUT2B' of module 'MMCME2_BASE' is unconnected for instance 'u_mmcm' [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/mmcm_50_125.v:79]
+WARNING: [Synth 8-7071] port 'CLKOUT3B' of module 'MMCME2_BASE' is unconnected for instance 'u_mmcm' [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/mmcm_50_125.v:79]
+WARNING: [Synth 8-7071] port 'CLKOUT4' of module 'MMCME2_BASE' is unconnected for instance 'u_mmcm' [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/mmcm_50_125.v:79]
+WARNING: [Synth 8-7071] port 'CLKOUT5' of module 'MMCME2_BASE' is unconnected for instance 'u_mmcm' [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/mmcm_50_125.v:79]
+WARNING: [Synth 8-7071] port 'CLKOUT6' of module 'MMCME2_BASE' is unconnected for instance 'u_mmcm' [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/mmcm_50_125.v:79]
+WARNING: [Synth 8-7023] instance 'u_mmcm' of module 'MMCME2_BASE' has 18 connections declared, but only 10 given [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/mmcm_50_125.v:79]
+INFO: [Synth 8-6157] synthesizing module 'BUFG' [/home/haitaoz/Xilinx/2024.1/Vivado/2024.1/scripts/rt/data/unisim_comp.v:1951]
+INFO: [Synth 8-6155] done synthesizing module 'BUFG' (0#1) [/home/haitaoz/Xilinx/2024.1/Vivado/2024.1/scripts/rt/data/unisim_comp.v:1951]
+INFO: [Synth 8-6155] done synthesizing module 'mmcm_50_125' (0#1) [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/mmcm_50_125.v:21]
+INFO: [Synth 8-6157] synthesizing module 'fpga_build_time' [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/fpga_build_time.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'fpga_build_time' (0#1) [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/fpga_build_time.v:6]
+INFO: [Synth 8-6157] synthesizing module 'rgmii_gmii_bridge' [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/rgmii_gmii_bridge.v:22]
+INFO: [Synth 8-6157] synthesizing module 'gmii_to_rgmii' [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/gmii_to_rgmii.v:14]
+INFO: [Synth 8-6157] synthesizing module 'ODDR' [/home/haitaoz/Xilinx/2024.1/Vivado/2024.1/scripts/rt/data/unisim_comp.v:100102]
+	Parameter DDR_CLK_EDGE bound to: OPPOSITE_EDGE - type: string 
+	Parameter INIT bound to: 1'b0 
+	Parameter SRTYPE bound to: ASYNC - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'ODDR' (0#1) [/home/haitaoz/Xilinx/2024.1/Vivado/2024.1/scripts/rt/data/unisim_comp.v:100102]
+INFO: [Synth 8-6155] done synthesizing module 'gmii_to_rgmii' (0#1) [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/gmii_to_rgmii.v:14]
+INFO: [Synth 8-6157] synthesizing module 'rgmii_to_gmii' [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/rgmii_to_gmii.v:19]
+INFO: [Synth 8-6157] synthesizing module 'IDELAYE2' [/home/haitaoz/Xilinx/2024.1/Vivado/2024.1/scripts/rt/data/unisim_comp.v:75752]
+	Parameter DELAY_SRC bound to: IDATAIN - type: string 
+	Parameter HIGH_PERFORMANCE_MODE bound to: TRUE - type: string 
+	Parameter IDELAY_TYPE bound to: FIXED - type: string 
+	Parameter IDELAY_VALUE bound to: 20 - type: integer 
+	Parameter REFCLK_FREQUENCY bound to: 200.000000 - type: double 
+	Parameter SIGNAL_PATTERN bound to: DATA - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'IDELAYE2' (0#1) [/home/haitaoz/Xilinx/2024.1/Vivado/2024.1/scripts/rt/data/unisim_comp.v:75752]
+INFO: [Synth 8-6157] synthesizing module 'IDDR' [/home/haitaoz/Xilinx/2024.1/Vivado/2024.1/scripts/rt/data/unisim_comp.v:75617]
+	Parameter DDR_CLK_EDGE bound to: SAME_EDGE_PIPELINED - type: string 
+	Parameter INIT_Q1 bound to: 1'b0 
+	Parameter INIT_Q2 bound to: 1'b0 
+	Parameter SRTYPE bound to: ASYNC - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'IDDR' (0#1) [/home/haitaoz/Xilinx/2024.1/Vivado/2024.1/scripts/rt/data/unisim_comp.v:75617]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/rgmii_to_gmii.v:39]
+INFO: [Synth 8-6157] synthesizing module 'IDELAYCTRL' [/home/haitaoz/Xilinx/2024.1/Vivado/2024.1/scripts/rt/data/unisim_comp.v:75739]
+INFO: [Synth 8-6155] done synthesizing module 'IDELAYCTRL' (0#1) [/home/haitaoz/Xilinx/2024.1/Vivado/2024.1/scripts/rt/data/unisim_comp.v:75739]
+INFO: [Synth 8-6155] done synthesizing module 'rgmii_to_gmii' (0#1) [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/rgmii_to_gmii.v:19]
+INFO: [Synth 8-6155] done synthesizing module 'rgmii_gmii_bridge' (0#1) [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/rgmii_gmii_bridge.v:22]
+INFO: [Synth 8-6157] synthesizing module 'gmii2mac' [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/gmii2mac.v:3]
+INFO: [Synth 8-6157] synthesizing module 'dual_clock_fifo' [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/dual_clock_fifo.v:17]
+	Parameter addr_width bound to: 4 - type: integer 
+	Parameter data_width bound to: 10 - type: integer 
+	Parameter ram_type bound to: distributed - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'dual_clock_fifo' (0#1) [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/dual_clock_fifo.v:17]
+INFO: [Synth 8-6157] synthesizing module 'eth_presemble' [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/eth_presemble.v:14]
+	Parameter rx_presemble_en bound to: 1 - type: integer 
+	Parameter tx_presemble_en bound to: 1 - type: integer 
+	Parameter data_width bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'fix_delay' [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/fix_delay.v:15]
+	Parameter delay_cycles bound to: 8 - type: integer 
+	Parameter data_width bound to: 9 - type: integer 
+	Parameter ram_type bound to: registers - type: string 
+	Parameter block_ram_size bound to: 9 - type: integer 
+	Parameter vendor bound to: (null) - type: string 
+INFO: [Synth 8-6157] synthesizing module 'single_clock_simple_dual_port_ram' [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/single_clock_simple_dual_port_ram.v:31]
+	Parameter data_width bound to: 9 - type: integer 
+	Parameter addr_width bound to: 3 - type: integer 
+	Parameter depth bound to: 8 - type: integer 
+	Parameter block_ram_size bound to: 9 - type: integer 
+	Parameter ram_type bound to: registers - type: string 
+	Parameter vendor bound to: (null) - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'single_clock_simple_dual_port_ram' (0#1) [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/single_clock_simple_dual_port_ram.v:31]
+INFO: [Synth 8-6155] done synthesizing module 'fix_delay' (0#1) [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/fix_delay.v:15]
+INFO: [Synth 8-6155] done synthesizing module 'eth_presemble' (0#1) [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/eth_presemble.v:14]
+INFO: [Synth 8-6157] synthesizing module 'mac_top' [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/mac_top.v:17]
+INFO: [Synth 8-6157] synthesizing module 'mac_rx' [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/mac_rx.v:19]
+INFO: [Synth 8-6157] synthesizing module 'crc' [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/crc.v:42]
+	Parameter data_in_width bound to: 8 - type: integer 
+	Parameter crc_type bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'crc' (0#1) [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/crc.v:42]
+INFO: [Synth 8-6157] synthesizing module 'sop_eop_gen' [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/sop_eop_gen.v:14]
+	Parameter data_width bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'sop_eop_gen' (0#1) [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/sop_eop_gen.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'mac_rx' (0#1) [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/mac_rx.v:19]
+INFO: [Synth 8-6157] synthesizing module 'mac_tx' [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/mac_tx.v:19]
+INFO: [Synth 8-6157] synthesizing module 'fix_delay__parameterized0' [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/fix_delay.v:15]
+	Parameter delay_cycles bound to: 4 - type: integer 
+	Parameter data_width bound to: 9 - type: integer 
+	Parameter ram_type bound to: registers - type: string 
+INFO: [Synth 8-6157] synthesizing module 'single_clock_simple_dual_port_ram__parameterized0' [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/single_clock_simple_dual_port_ram.v:31]
+	Parameter data_width bound to: 9 - type: integer 
+	Parameter addr_width bound to: 2 - type: integer 
+	Parameter depth bound to: 4 - type: integer 
+	Parameter block_ram_size bound to: 9 - type: integer 
+	Parameter ram_type bound to: registers - type: string 
+	Parameter vendor bound to: (null) - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'single_clock_simple_dual_port_ram__parameterized0' (0#1) [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/single_clock_simple_dual_port_ram.v:31]
+INFO: [Synth 8-6155] done synthesizing module 'fix_delay__parameterized0' (0#1) [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/fix_delay.v:15]
+INFO: [Synth 8-6155] done synthesizing module 'mac_tx' (0#1) [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/mac_tx.v:19]
+INFO: [Synth 8-6155] done synthesizing module 'mac_top' (0#1) [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/mac_top.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'gmii2mac' (0#1) [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/gmii2mac.v:3]
+INFO: [Synth 8-6157] synthesizing module 'cpu_channel' [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/cpu_channel.v:19]
+	Parameter cpu_buf_addr_width bound to: 12 - type: integer 
+	Parameter cpu_buf_block_mode bound to: false - type: string 
+	Parameter cpu_buf_block_addr_width bound to: 3 - type: integer 
+	Parameter cpu_buf_data_width bound to: 8 - type: integer 
+	Parameter cpu_buf_para_width bound to: 1 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'ram2pktfifo_int' [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/ram2pktfifo_int.v:15]
+	Parameter addr_width bound to: 12 - type: integer 
+	Parameter data_width bound to: 8 - type: integer 
+	Parameter para_width bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'ram2pktfifo_int' (0#1) [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/ram2pktfifo_int.v:15]
+WARNING: [Synth 8-689] width (1) of port connection 'ram_waddr' does not match port width (12) of module 'ram2pktfifo_int' [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/cpu_channel.v:105]
+INFO: [Synth 8-6157] synthesizing module 'package_fifo_v2' [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/package_fifo_v2.v:14]
+	Parameter dual_clock bound to: 1 - type: integer 
+	Parameter addr_width bound to: 12 - type: integer 
+	Parameter block_addr_width bound to: 3 - type: integer 
+	Parameter data_width bound to: 8 - type: integer 
+	Parameter para_width bound to: 1 - type: integer 
+	Parameter para_ram_type bound to: registers - type: string 
+	Parameter data_ram_type bound to: M9K - type: string 
+	Parameter max_pkt_length bound to: 1518 - type: integer 
+	Parameter block_mode bound to: false - type: string 
+INFO: [Synth 8-6157] synthesizing module 'pulse_clock_region_pass' [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/pulse_clock_region_pass.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'pulse_clock_region_pass' (0#1) [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/pulse_clock_region_pass.v:14]
+INFO: [Synth 8-6157] synthesizing module 'dual_clock_fifo__parameterized0' [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/dual_clock_fifo.v:17]
+	Parameter addr_width bound to: 3 - type: integer 
+	Parameter data_width bound to: 26 - type: integer 
+	Parameter ram_type bound to: registers - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'dual_clock_fifo__parameterized0' (0#1) [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/dual_clock_fifo.v:17]
+INFO: [Synth 8-6157] synthesizing module 'dual_clock_simple_dual_port_ram' [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/dual_clock_simple_dual_port_ram.v:26]
+	Parameter data_width bound to: 8 - type: integer 
+	Parameter addr_width bound to: 12 - type: integer 
+	Parameter depth bound to: 4096 - type: integer 
+	Parameter block_ram_size bound to: 32 - type: integer 
+	Parameter ram_type bound to: M9K - type: string 
+	Parameter vendor bound to: (null) - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'dual_clock_simple_dual_port_ram' (0#1) [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/dual_clock_simple_dual_port_ram.v:26]
+INFO: [Synth 8-6155] done synthesizing module 'package_fifo_v2' (0#1) [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/package_fifo_v2.v:14]
+WARNING: [Synth 8-7071] port 'overflow' of module 'package_fifo_v2' is unconnected for instance 'u_package_fifo_cpu_rd' [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/cpu_channel.v:145]
+WARNING: [Synth 8-7071] port 'underflow' of module 'package_fifo_v2' is unconnected for instance 'u_package_fifo_cpu_rd' [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/cpu_channel.v:145]
+WARNING: [Synth 8-7023] instance 'u_package_fifo_cpu_rd' of module 'package_fifo_v2' has 22 connections declared, but only 20 given [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/cpu_channel.v:145]
+WARNING: [Synth 8-7071] port 'overflow' of module 'package_fifo_v2' is unconnected for instance 'u_package_fifo_cpu_wr' [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/cpu_channel.v:187]
+WARNING: [Synth 8-7071] port 'underflow' of module 'package_fifo_v2' is unconnected for instance 'u_package_fifo_cpu_wr' [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/cpu_channel.v:187]
+WARNING: [Synth 8-7023] instance 'u_package_fifo_cpu_wr' of module 'package_fifo_v2' has 22 connections declared, but only 20 given [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/cpu_channel.v:187]
+INFO: [Synth 8-6157] synthesizing module 'pktfifo2ram_int_v2' [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/pktfifo2ram_int_v2.v:15]
+	Parameter addr_width bound to: 12 - type: integer 
+	Parameter data_width bound to: 8 - type: integer 
+	Parameter para_width bound to: 1 - type: integer 
+	Parameter ipg bound to: 8 - type: integer 
+	Parameter block_mode bound to: false - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'pktfifo2ram_int_v2' (0#1) [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/pktfifo2ram_int_v2.v:15]
+INFO: [Synth 8-6155] done synthesizing module 'cpu_channel' (0#1) [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/cpu_channel.v:19]
+INFO: [Synth 8-6157] synthesizing module 'lcpu_riscv_wrapper' [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/lcpu_riscv_wrapper.v:1]
+	Parameter sim_mod bound to: 0 - type: integer 
+	Parameter lcpu_type bound to: uart - type: string 
+	Parameter uart_baud_rate bound to: 115200 - type: integer 
+	Parameter riscv_inst_en bound to: 1 - type: integer 
+	Parameter instr_databits bound to: 32 - type: integer 
+	Parameter init_addr_width bound to: 13 - type: integer 
+	Parameter init_addr_depth bound to: 2048 - type: integer 
+	Parameter device_vendor bound to: xilinx - type: string 
+	Parameter instr_ram_type bound to: block - type: string 
+	Parameter init_blockram_size bound to: 8 - type: integer 
+	Parameter enable_irq bound to: 0 - type: integer 
+	Parameter enable_irq_qregs bound to: 1 - type: integer 
+	Parameter progaddr_irq bound to: 16 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'lcpu_top' [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/lcpu_top.v:3]
+	Parameter lcpu_vendor bound to: uart - type: string 
+	Parameter device_vendor bound to: xilinx - type: string 
+	Parameter uart_baud_rate bound to: 115200 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'uart_lcpu_top' [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/uart_lcpu_top.v:1]
+	Parameter uart_baud_rate bound to: 115200 - type: integer 
+	Parameter para_ram_type bound to: distributed - type: string 
+	Parameter data_ram_type bound to: block - type: string 
+INFO: [Synth 8-6157] synthesizing module 'uart' [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/uart.v:14]
+	Parameter baud_rate bound to: 115200 - type: integer 
+	Parameter data_number bound to: 16 - type: integer 
+	Parameter data_width bound to: 8 - type: integer 
+	Parameter ram_type bound to: block - type: string 
+INFO: [Synth 8-6157] synthesizing module 'clock_frequency_divider' [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/clock_frequency_divider.v:17]
+	Parameter div_Mbits bound to: 28 - type: integer 
+	Parameter div_Nbits bound to: 28 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'clock_frequency_divider' (0#1) [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/clock_frequency_divider.v:17]
+INFO: [Synth 8-6157] synthesizing module 'uart_rx' [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/uart_rx.v:14]
+	Parameter addr_width bound to: 4 - type: integer 
+	Parameter data_width bound to: 8 - type: integer 
+	Parameter ram_type bound to: block - type: string 
+INFO: [Synth 8-6157] synthesizing module 'dual_clock_fifo__parameterized1' [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/dual_clock_fifo.v:17]
+	Parameter addr_width bound to: 4 - type: integer 
+	Parameter data_width bound to: 8 - type: integer 
+	Parameter ram_type bound to: block - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'dual_clock_fifo__parameterized1' (0#1) [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/dual_clock_fifo.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'uart_rx' (0#1) [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/uart_rx.v:14]
+INFO: [Synth 8-6157] synthesizing module 'uart_tx' [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/uart_tx.v:14]
+	Parameter addr_width bound to: 4 - type: integer 
+	Parameter data_width bound to: 8 - type: integer 
+	Parameter ram_type bound to: block - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'uart_tx' (0#1) [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/uart_tx.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'uart' (0#1) [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/uart.v:14]
+INFO: [Synth 8-6157] synthesizing module 'uart_lcpu' [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/uart_lcpu.v:14]
+	Parameter addr_width bound to: 5 - type: integer 
+	Parameter block_addr_width bound to: 2 - type: integer 
+	Parameter data_width bound to: 8 - type: integer 
+	Parameter para_width bound to: 2 - type: integer 
+	Parameter para_ram_type bound to: distributed - type: string 
+	Parameter data_ram_type bound to: block - type: string 
+INFO: [Synth 8-6157] synthesizing module 'uart_in_pktfifo' [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/uart_lcpu.v:161]
+	Parameter addr_width bound to: 5 - type: integer 
+	Parameter data_width bound to: 8 - type: integer 
+	Parameter para_width bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'uart_in_pktfifo' (0#1) [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/uart_lcpu.v:161]
+INFO: [Synth 8-6157] synthesizing module 'package_fifo_v2__parameterized0' [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/package_fifo_v2.v:14]
+	Parameter dual_clock bound to: 0 - type: integer 
+	Parameter addr_width bound to: 5 - type: integer 
+	Parameter block_addr_width bound to: 2 - type: integer 
+	Parameter data_width bound to: 8 - type: integer 
+	Parameter para_width bound to: 2 - type: integer 
+	Parameter para_ram_type bound to: distributed - type: string 
+	Parameter data_ram_type bound to: block - type: string 
+	Parameter block_mode bound to: true - type: string 
+INFO: [Synth 8-6157] synthesizing module 'single_clock_fifo' [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/single_clock_fifo.v:17]
+	Parameter addr_width bound to: 2 - type: integer 
+	Parameter data_width bound to: 10 - type: integer 
+	Parameter ram_type bound to: distributed - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'single_clock_fifo' (0#1) [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/single_clock_fifo.v:17]
+INFO: [Synth 8-6157] synthesizing module 'single_clock_simple_dual_port_ram__parameterized1' [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/single_clock_simple_dual_port_ram.v:31]
+	Parameter data_width bound to: 8 - type: integer 
+	Parameter addr_width bound to: 7 - type: integer 
+	Parameter depth bound to: 128 - type: integer 
+	Parameter block_ram_size bound to: 32 - type: integer 
+	Parameter ram_type bound to: block - type: string 
+	Parameter vendor bound to: (null) - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'single_clock_simple_dual_port_ram__parameterized1' (0#1) [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/single_clock_simple_dual_port_ram.v:31]
+INFO: [Synth 8-6155] done synthesizing module 'package_fifo_v2__parameterized0' (0#1) [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/package_fifo_v2.v:14]
+WARNING: [Synth 8-7071] port 'reop_pre' of module 'package_fifo_v2' is unconnected for instance 'u_pkt_fifo' [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/uart_lcpu.v:102]
+WARNING: [Synth 8-7071] port 'overflow' of module 'package_fifo_v2' is unconnected for instance 'u_pkt_fifo' [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/uart_lcpu.v:102]
+WARNING: [Synth 8-7071] port 'underflow' of module 'package_fifo_v2' is unconnected for instance 'u_pkt_fifo' [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/uart_lcpu.v:102]
+WARNING: [Synth 8-7023] instance 'u_pkt_fifo' of module 'package_fifo_v2' has 22 connections declared, but only 19 given [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/uart_lcpu.v:102]
+INFO: [Synth 8-6157] synthesizing module 'pktfifo_out_lcpu' [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/uart_lcpu.v:338]
+	Parameter addr_width bound to: 5 - type: integer 
+	Parameter data_width bound to: 8 - type: integer 
+	Parameter para_width bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'pktfifo_out_lcpu' (0#1) [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/uart_lcpu.v:338]
+INFO: [Synth 8-6157] synthesizing module 'lcpu_out_uart' [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/uart_lcpu.v:534]
+INFO: [Synth 8-226] default block is never used [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/uart_lcpu.v:552]
+INFO: [Synth 8-6155] done synthesizing module 'lcpu_out_uart' (0#1) [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/uart_lcpu.v:534]
+INFO: [Synth 8-6155] done synthesizing module 'uart_lcpu' (0#1) [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/uart_lcpu.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'uart_lcpu_top' (0#1) [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/uart_lcpu_top.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'lcpu_top' (0#1) [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/lcpu_top.v:3]
+INFO: [Synth 8-6157] synthesizing module 'riscv32_top' [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/riscv32_top.v:1]
+	Parameter instr_databits bound to: 32 - type: integer 
+	Parameter init_addr_width bound to: 13 - type: integer 
+	Parameter init_addr_depth bound to: 2048 - type: integer 
+	Parameter vendor bound to: xilinx - type: string 
+	Parameter instr_ram_type bound to: block - type: string 
+	Parameter init_blockram_size bound to: 8 - type: integer 
+	Parameter enable_irq bound to: 0 - type: integer 
+	Parameter enable_irq_qregs bound to: 1 - type: integer 
+	Parameter progaddr_irq bound to: 16 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'riscv32_localbus' [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/riscv32_localbus.v:1]
+	Parameter enable_irq bound to: 0 - type: integer 
+	Parameter enable_irq_qregs bound to: 1 - type: integer 
+	Parameter progaddr_irq bound to: 16 - type: integer 
+	Parameter stackaddr bound to: 8192 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'picorv32' [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/picorv32.v:62]
+	Parameter ENABLE_COUNTERS bound to: 1'b1 
+	Parameter ENABLE_COUNTERS64 bound to: 1'b1 
+	Parameter ENABLE_REGS_16_31 bound to: 1'b1 
+	Parameter ENABLE_REGS_DUALPORT bound to: 1'b1 
+	Parameter LATCHED_MEM_RDATA bound to: 1'b0 
+	Parameter TWO_STAGE_SHIFT bound to: 1'b1 
+	Parameter BARREL_SHIFTER bound to: 1'b0 
+	Parameter TWO_CYCLE_COMPARE bound to: 1'b0 
+	Parameter TWO_CYCLE_ALU bound to: 1'b0 
+	Parameter COMPRESSED_ISA bound to: 1'b1 
+	Parameter CATCH_MISALIGN bound to: 1'b0 
+	Parameter CATCH_ILLINSN bound to: 1'b1 
+	Parameter ENABLE_PCPI bound to: 1'b0 
+	Parameter ENABLE_MUL bound to: 1'b0 
+	Parameter ENABLE_FAST_MUL bound to: 1'b0 
+	Parameter ENABLE_DIV bound to: 1'b0 
+	Parameter ENABLE_IRQ bound to: 0 - type: integer 
+	Parameter ENABLE_IRQ_QREGS bound to: 1 - type: integer 
+	Parameter ENABLE_IRQ_TIMER bound to: 1'b1 
+	Parameter ENABLE_TRACE bound to: 1'b0 
+	Parameter REGS_INIT_ZERO bound to: 1'b1 
+	Parameter MASKED_IRQ bound to: 0 - type: integer 
+	Parameter LATCHED_IRQ bound to: -1 - type: integer 
+	Parameter PROGADDR_RESET bound to: 0 - type: integer 
+	Parameter PROGADDR_IRQ bound to: 16 - type: integer 
+	Parameter STACKADDR bound to: 8192 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/picorv32.v:439]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/picorv32.v:455]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/picorv32.v:509]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/picorv32.v:437]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/picorv32.v:902]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/picorv32.v:984]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/picorv32.v:900]
+WARNING: [Synth 8-151] case item 1'b0 is unreachable [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/picorv32.v:1263]
+WARNING: [Synth 8-151] case item 1'b0 is unreachable [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/picorv32.v:1309]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/picorv32.v:1309]
+WARNING: [Synth 8-151] case item 1'b0 is unreachable [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/picorv32.v:1492]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/picorv32.v:1492]
+WARNING: [Synth 8-151] case item 1'b0 is unreachable [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/picorv32.v:1578]
+WARNING: [Synth 8-151] case item 1'b0 is unreachable [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/picorv32.v:1578]
+WARNING: [Synth 8-151] case item 1'b0 is unreachable [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/picorv32.v:1578]
+WARNING: [Synth 8-151] case item 1'b0 is unreachable [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/picorv32.v:1578]
+WARNING: [Synth 8-151] case item 1'b0 is unreachable [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/picorv32.v:1578]
+INFO: [Synth 8-6155] done synthesizing module 'picorv32' (0#1) [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/picorv32.v:62]
+WARNING: [Synth 8-7071] port 'trap' of module 'picorv32' is unconnected for instance 'u_picorv32' [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/riscv32_localbus.v:58]
+WARNING: [Synth 8-7071] port 'mem_la_read' of module 'picorv32' is unconnected for instance 'u_picorv32' [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/riscv32_localbus.v:58]
+WARNING: [Synth 8-7071] port 'mem_la_write' of module 'picorv32' is unconnected for instance 'u_picorv32' [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/riscv32_localbus.v:58]
+WARNING: [Synth 8-7071] port 'mem_la_addr' of module 'picorv32' is unconnected for instance 'u_picorv32' [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/riscv32_localbus.v:58]
+WARNING: [Synth 8-7071] port 'mem_la_wdata' of module 'picorv32' is unconnected for instance 'u_picorv32' [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/riscv32_localbus.v:58]
+WARNING: [Synth 8-7071] port 'mem_la_wstrb' of module 'picorv32' is unconnected for instance 'u_picorv32' [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/riscv32_localbus.v:58]
+WARNING: [Synth 8-7071] port 'pcpi_valid' of module 'picorv32' is unconnected for instance 'u_picorv32' [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/riscv32_localbus.v:58]
+WARNING: [Synth 8-7071] port 'pcpi_insn' of module 'picorv32' is unconnected for instance 'u_picorv32' [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/riscv32_localbus.v:58]
+WARNING: [Synth 8-7071] port 'pcpi_rs1' of module 'picorv32' is unconnected for instance 'u_picorv32' [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/riscv32_localbus.v:58]
+WARNING: [Synth 8-7071] port 'pcpi_rs2' of module 'picorv32' is unconnected for instance 'u_picorv32' [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/riscv32_localbus.v:58]
+WARNING: [Synth 8-7071] port 'pcpi_wr' of module 'picorv32' is unconnected for instance 'u_picorv32' [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/riscv32_localbus.v:58]
+WARNING: [Synth 8-7071] port 'pcpi_rd' of module 'picorv32' is unconnected for instance 'u_picorv32' [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/riscv32_localbus.v:58]
+WARNING: [Synth 8-7071] port 'pcpi_wait' of module 'picorv32' is unconnected for instance 'u_picorv32' [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/riscv32_localbus.v:58]
+WARNING: [Synth 8-7071] port 'pcpi_ready' of module 'picorv32' is unconnected for instance 'u_picorv32' [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/riscv32_localbus.v:58]
+WARNING: [Synth 8-7071] port 'eoi' of module 'picorv32' is unconnected for instance 'u_picorv32' [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/riscv32_localbus.v:58]
+WARNING: [Synth 8-7071] port 'trace_valid' of module 'picorv32' is unconnected for instance 'u_picorv32' [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/riscv32_localbus.v:58]
+WARNING: [Synth 8-7071] port 'trace_data' of module 'picorv32' is unconnected for instance 'u_picorv32' [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/riscv32_localbus.v:58]
+WARNING: [Synth 8-7023] instance 'u_picorv32' of module 'picorv32' has 27 connections declared, but only 10 given [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/riscv32_localbus.v:58]
+INFO: [Synth 8-6157] synthesizing module 'riscv32intfbridge' [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/riscv32intfbridge.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'riscv32intfbridge' (0#1) [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/riscv32intfbridge.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'riscv32_localbus' (0#1) [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/riscv32_localbus.v:1]
+INFO: [Synth 8-6157] synthesizing module 'riscv_reg' [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/riscv_reg.v:2]
+INFO: [Synth 8-6157] synthesizing module 'ramintf' [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/ramintf.v:1]
+	Parameter DataBits bound to: 32 - type: integer 
+	Parameter AddrBits bound to: 31 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'ramintf' (0#1) [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/ramintf.v:1]
+WARNING: [Synth 8-7071] port 'Ram_ByteEn' of module 'ramintf' is unconnected for instance 'RAMIF_instuct_ram' [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/riscv_reg.v:138]
+WARNING: [Synth 8-7071] port 'byte_en' of module 'ramintf' is unconnected for instance 'RAMIF_instuct_ram' [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/riscv_reg.v:138]
+WARNING: [Synth 8-7023] instance 'RAMIF_instuct_ram' of module 'ramintf' has 14 connections declared, but only 12 given [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/riscv_reg.v:138]
+INFO: [Synth 8-6155] done synthesizing module 'riscv_reg' (0#1) [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/riscv_reg.v:2]
+INFO: [Synth 8-6157] synthesizing module 'single_clock_true_dual_port_ram' [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/single_clock_true_dual_port_ram.v:34]
+	Parameter data_width bound to: 32 - type: integer 
+	Parameter addr_width bound to: 13 - type: integer 
+	Parameter depth bound to: 2048 - type: integer 
+	Parameter block_ram_size bound to: 8 - type: integer 
+	Parameter ram_type bound to: block - type: string 
+	Parameter vendor bound to: xilinx - type: string 
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_tdpram' [/home/haitaoz/Xilinx/2024.1/Vivado/2024.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:9050]
+	Parameter MEMORY_SIZE bound to: 8192 - type: integer 
+	Parameter MEMORY_PRIMITIVE bound to: block - type: string 
+	Parameter CLOCKING_MODE bound to: common_clock - type: string 
+	Parameter ECC_MODE bound to: no_ecc - type: string 
+	Parameter MEMORY_INIT_FILE bound to: none - type: string 
+	Parameter MEMORY_INIT_PARAM bound to: 0 - type: string 
+	Parameter USE_MEM_INIT bound to: 0 - type: integer 
+	Parameter WAKEUP_TIME bound to: disable_sleep - type: string 
+	Parameter AUTO_SLEEP_TIME bound to: 0 - type: integer 
+	Parameter MESSAGE_CONTROL bound to: 0 - type: integer 
+	Parameter USE_EMBEDDED_CONSTRAINT bound to: 0 - type: integer 
+	Parameter MEMORY_OPTIMIZATION bound to: true - type: string 
+	Parameter CASCADE_HEIGHT bound to: 0 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter WRITE_DATA_WIDTH_A bound to: 32 - type: integer 
+	Parameter READ_DATA_WIDTH_A bound to: 32 - type: integer 
+	Parameter BYTE_WRITE_WIDTH_A bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH_A bound to: 8 - type: integer 
+	Parameter READ_RESET_VALUE_A bound to: 0 - type: string 
+	Parameter READ_LATENCY_A bound to: 1 - type: integer 
+	Parameter WRITE_MODE_A bound to: read_first - type: string 
+	Parameter RST_MODE_A bound to: SYNC - type: string 
+	Parameter WRITE_DATA_WIDTH_B bound to: 32 - type: integer 
+	Parameter READ_DATA_WIDTH_B bound to: 32 - type: integer 
+	Parameter BYTE_WRITE_WIDTH_B bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH_B bound to: 8 - type: integer 
+	Parameter READ_RESET_VALUE_B bound to: 0 - type: string 
+	Parameter READ_LATENCY_B bound to: 1 - type: integer 
+	Parameter WRITE_MODE_B bound to: read_first - type: string 
+	Parameter RST_MODE_B bound to: SYNC - type: string 
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base' [/home/haitaoz/Xilinx/2024.1/Vivado/2024.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:54]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base' (0#1) [/home/haitaoz/Xilinx/2024.1/Vivado/2024.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:54]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_tdpram' (0#1) [/home/haitaoz/Xilinx/2024.1/Vivado/2024.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:9050]
+INFO: [Synth 8-6155] done synthesizing module 'single_clock_true_dual_port_ram' (0#1) [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/single_clock_true_dual_port_ram.v:34]
+INFO: [Synth 8-6155] done synthesizing module 'riscv32_top' (0#1) [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/riscv32_top.v:1]
+INFO: [Synth 8-6157] synthesizing module 'lcpu_merge' [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/lcpu_merge.v:16]
+	Parameter addr_width bound to: 32 - type: integer 
+	Parameter data_width bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'lcpu_merge' (0#1) [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/lcpu_merge.v:16]
+INFO: [Synth 8-6155] done synthesizing module 'lcpu_riscv_wrapper' (0#1) [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/lcpu_riscv_wrapper.v:1]
+WARNING: [Synth 8-689] width (16) of port connection 'pram_addr' does not match port width (13) of module 'lcpu_riscv_wrapper' [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/webserver_cpu_top.v:321]
+INFO: [Synth 8-6157] synthesizing module 'lcpu_fpga_test' [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/lcpu_fpga_test.v:2]
+INFO: [Synth 8-6157] synthesizing module 'ramintf__parameterized0' [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/ramintf.v:1]
+	Parameter DataBits bound to: 32 - type: integer 
+	Parameter AddrBits bound to: 16 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'ramintf__parameterized0' (0#1) [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/ramintf.v:1]
+WARNING: [Synth 8-7071] port 'Ram_ByteEn' of module 'ramintf' is unconnected for instance 'RAMIF_program_ram' [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/lcpu_fpga_test.v:550]
+WARNING: [Synth 8-7071] port 'byte_en' of module 'ramintf' is unconnected for instance 'RAMIF_program_ram' [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/lcpu_fpga_test.v:550]
+WARNING: [Synth 8-7023] instance 'RAMIF_program_ram' of module 'ramintf' has 14 connections declared, but only 12 given [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/lcpu_fpga_test.v:550]
+INFO: [Synth 8-6155] done synthesizing module 'lcpu_fpga_test' (0#1) [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/lcpu_fpga_test.v:2]
+WARNING: [Synth 8-7071] port 'sw_build_date' of module 'lcpu_fpga_test' is unconnected for instance 'u_reg' [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/webserver_cpu_top.v:336]
+WARNING: [Synth 8-7071] port 'sw_build_time' of module 'lcpu_fpga_test' is unconnected for instance 'u_reg' [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/webserver_cpu_top.v:336]
+WARNING: [Synth 8-7071] port 'Scrach_RW_0' of module 'lcpu_fpga_test' is unconnected for instance 'u_reg' [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/webserver_cpu_top.v:336]
+WARNING: [Synth 8-7071] port 'Scrach_RW_1' of module 'lcpu_fpga_test' is unconnected for instance 'u_reg' [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/webserver_cpu_top.v:336]
+WARNING: [Synth 8-7071] port 'Scrach_RW_2' of module 'lcpu_fpga_test' is unconnected for instance 'u_reg' [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/webserver_cpu_top.v:336]
+WARNING: [Synth 8-7071] port 'Scrach_RW_3' of module 'lcpu_fpga_test' is unconnected for instance 'u_reg' [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/webserver_cpu_top.v:336]
+WARNING: [Synth 8-7071] port 'Scrach_RW_4' of module 'lcpu_fpga_test' is unconnected for instance 'u_reg' [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/webserver_cpu_top.v:336]
+WARNING: [Synth 8-7071] port 'Scrach_RW_5' of module 'lcpu_fpga_test' is unconnected for instance 'u_reg' [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/webserver_cpu_top.v:336]
+WARNING: [Synth 8-7071] port 'Scrach_RW_6' of module 'lcpu_fpga_test' is unconnected for instance 'u_reg' [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/webserver_cpu_top.v:336]
+WARNING: [Synth 8-7071] port 'Scrach_RW_7' of module 'lcpu_fpga_test' is unconnected for instance 'u_reg' [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/webserver_cpu_top.v:336]
+WARNING: [Synth 8-7071] port 'Scrach_RW_8' of module 'lcpu_fpga_test' is unconnected for instance 'u_reg' [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/webserver_cpu_top.v:336]
+WARNING: [Synth 8-7071] port 'Scrach_RW_9' of module 'lcpu_fpga_test' is unconnected for instance 'u_reg' [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/webserver_cpu_top.v:336]
+WARNING: [Synth 8-7071] port 'Scrach_RW_10' of module 'lcpu_fpga_test' is unconnected for instance 'u_reg' [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/webserver_cpu_top.v:336]
+WARNING: [Synth 8-7071] port 'Scrach_RW_11' of module 'lcpu_fpga_test' is unconnected for instance 'u_reg' [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/webserver_cpu_top.v:336]
+WARNING: [Synth 8-7071] port 'cpu_rd_rpkt_para' of module 'lcpu_fpga_test' is unconnected for instance 'u_reg' [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/webserver_cpu_top.v:336]
+WARNING: [Synth 8-7023] instance 'u_reg' of module 'lcpu_fpga_test' has 48 connections declared, but only 33 given [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/webserver_cpu_top.v:336]
+INFO: [Synth 8-6155] done synthesizing module 'webserver_cpu_top' (0#1) [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/webserver_cpu_top.v:8]
+WARNING: [Synth 8-7137] Register mem_array_reg in module dual_clock_fifo has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code 
+WARNING: [Synth 8-7137] Register read_addr_reg in module dual_clock_fifo has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/dual_clock_fifo.v:141]
+WARNING: [Synth 8-4767] Trying to implement RAM 'mem_array_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
+Reason is one or more of the following :
+	1: RAM is sensitive to asynchronous reset signal. this RTL style is not supported. 
+RAM "mem_array_reg" dissolved into registers
+WARNING: [Synth 8-6014] Unused sequential element di_data_reg was removed.  [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/fix_delay.v:64]
+WARNING: [Synth 8-6014] Unused sequential element dii_data_reg was removed.  [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/fix_delay.v:65]
+WARNING: [Synth 8-6014] Unused sequential element rx_eth_byte_cnt_reg was removed.  [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/eth_presemble.v:51]
+WARNING: [Synth 8-6014] Unused sequential element di_data_reg was removed.  [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/fix_delay.v:64]
+WARNING: [Synth 8-6014] Unused sequential element dii_data_reg was removed.  [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/fix_delay.v:65]
+WARNING: [Synth 8-7137] Register mem_array_reg in module dual_clock_fifo__parameterized0 has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code 
+WARNING: [Synth 8-7137] Register read_addr_reg in module dual_clock_fifo__parameterized0 has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/dual_clock_fifo.v:141]
+WARNING: [Synth 8-4767] Trying to implement RAM 'mem_array_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
+Reason is one or more of the following :
+	1: RAM is sensitive to asynchronous reset signal. this RTL style is not supported. 
+RAM "mem_array_reg" dissolved into registers
+WARNING: [Synth 8-6014] Unused sequential element none_blk_mode.nb_rptr_reg was removed.  [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/package_fifo_v2.v:280]
+WARNING: [Synth 8-6014] Unused sequential element none_blk_mode.nb_rptr_reg_reg was removed.  [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/package_fifo_v2.v:334]
+WARNING: [Synth 8-6014] Unused sequential element ren_s_reg was removed.  [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/pktfifo2ram_int_v2.v:113]
+WARNING: [Synth 8-3848] Net rx_byte_cnt in module/entity cpu_channel does not have driver. [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/cpu_channel.v:105]
+WARNING: [Synth 8-7137] Register mem_array_reg in module dual_clock_fifo__parameterized1 has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code 
+WARNING: [Synth 8-7137] Register read_addr_reg in module dual_clock_fifo__parameterized1 has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/dual_clock_fifo.v:141]
+WARNING: [Synth 8-4767] Trying to implement RAM 'mem_array_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
+Reason is one or more of the following :
+	1: RAM is sensitive to asynchronous reset signal. this RTL style is not supported. 
+RAM "mem_array_reg" dissolved into registers
+WARNING: [Synth 8-7137] Register mem_array_reg in module single_clock_fifo has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code 
+WARNING: [Synth 8-7137] Register read_data_reg in module single_clock_fifo has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/single_clock_fifo.v:93]
+WARNING: [Synth 8-4767] Trying to implement RAM 'mem_array_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
+Reason is one or more of the following :
+	1: RAM is sensitive to asynchronous reset signal. this RTL style is not supported. 
+RAM "mem_array_reg" dissolved into registers
+WARNING: [Synth 8-7137] Register blk_mode.underflow_reg in module package_fifo_v2__parameterized0 has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/package_fifo_v2.v:230]
+WARNING: [Synth 8-6014] Unused sequential element next_insn_opcode_reg was removed.  [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/picorv32.v:433]
+WARNING: [Synth 8-6014] Unused sequential element q_ascii_instr_reg was removed.  [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/picorv32.v:777]
+WARNING: [Synth 8-6014] Unused sequential element q_insn_imm_reg was removed.  [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/picorv32.v:778]
+WARNING: [Synth 8-6014] Unused sequential element q_insn_opcode_reg was removed.  [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/picorv32.v:779]
+WARNING: [Synth 8-6014] Unused sequential element q_insn_rs1_reg was removed.  [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/picorv32.v:780]
+WARNING: [Synth 8-6014] Unused sequential element q_insn_rs2_reg was removed.  [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/picorv32.v:781]
+WARNING: [Synth 8-6014] Unused sequential element q_insn_rd_reg was removed.  [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/picorv32.v:782]
+WARNING: [Synth 8-6014] Unused sequential element dbg_next_reg was removed.  [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/picorv32.v:783]
+WARNING: [Synth 8-6014] Unused sequential element dbg_valid_insn_reg was removed.  [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/picorv32.v:786]
+WARNING: [Synth 8-6014] Unused sequential element cached_ascii_instr_reg was removed.  [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/picorv32.v:791]
+WARNING: [Synth 8-6014] Unused sequential element cached_insn_imm_reg was removed.  [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/picorv32.v:792]
+WARNING: [Synth 8-6014] Unused sequential element cached_insn_opcode_reg was removed.  [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/picorv32.v:794]
+WARNING: [Synth 8-6014] Unused sequential element cached_insn_rs1_reg was removed.  [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/picorv32.v:797]
+WARNING: [Synth 8-6014] Unused sequential element cached_insn_rs2_reg was removed.  [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/picorv32.v:798]
+WARNING: [Synth 8-6014] Unused sequential element cached_insn_rd_reg was removed.  [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/picorv32.v:799]
+WARNING: [Synth 8-6014] Unused sequential element dbg_insn_addr_reg was removed.  [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/picorv32.v:803]
+WARNING: [Synth 8-6014] Unused sequential element set_mem_do_rinst_reg was removed.  [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/picorv32.v:1401]
+WARNING: [Synth 8-6014] Unused sequential element set_mem_do_rdata_reg was removed.  [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/picorv32.v:1402]
+WARNING: [Synth 8-6014] Unused sequential element set_mem_do_wdata_reg was removed.  [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/picorv32.v:1403]
+WARNING: [Synth 8-6014] Unused sequential element alu_out_0_q_reg was removed.  [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/picorv32.v:1405]
+WARNING: [Synth 8-6014] Unused sequential element alu_wait_reg was removed.  [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/picorv32.v:1408]
+WARNING: [Synth 8-6014] Unused sequential element alu_wait_2_reg was removed.  [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/picorv32.v:1409]
+WARNING: [Synth 8-6014] Unused sequential element dbg_rs1val_reg was removed.  [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/picorv32.v:1412]
+WARNING: [Synth 8-6014] Unused sequential element dbg_rs2val_reg was removed.  [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/picorv32.v:1413]
+WARNING: [Synth 8-6014] Unused sequential element dbg_rs1val_valid_reg was removed.  [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/picorv32.v:1414]
+WARNING: [Synth 8-6014] Unused sequential element dbg_rs2val_valid_reg was removed.  [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/picorv32.v:1415]
+WARNING: [Synth 8-6014] Unused sequential element next_irq_pending_reg was removed.  [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/picorv32.v:1435]
+WARNING: [Synth 8-6014] Unused sequential element decoder_trigger_q_reg was removed.  [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/picorv32.v:1442]
+WARNING: [Synth 8-6014] Unused sequential element decoder_pseudo_trigger_q_reg was removed.  [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/picorv32.v:1444]
+WARNING: [Synth 8-6014] Unused sequential element latched_trace_reg was removed.  [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/picorv32.v:1460]
+WARNING: [Synth 8-6014] Unused sequential element irq_active_reg was removed.  [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/picorv32.v:1466]
+WARNING: [Synth 8-6014] Unused sequential element irq_delay_reg was removed.  [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/picorv32.v:1467]
+WARNING: [Synth 8-6014] Unused sequential element irq_mask_reg was removed.  [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/picorv32.v:1468]
+WARNING: [Synth 8-6014] Unused sequential element timer_reg was removed.  [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/picorv32.v:1472]
+WARNING: [Synth 8-6014] Unused sequential element current_pc_reg was removed.  [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/picorv32.v:1490]
+WARNING: [Synth 8-6014] Unused sequential element irq_pending_reg was removed.  [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/picorv32.v:1958]
+WARNING: [Synth 8-6014] Unused sequential element trace_valid_reg was removed.  [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/picorv32.v:1447]
+WARNING: [Synth 8-6014] Unused sequential element instr_ecall_ebreak_reg was removed.  [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/picorv32.v:1084]
+WARNING: [Synth 8-6014] Unused sequential element pcpi_timeout_reg was removed.  [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/picorv32.v:1465]
+WARNING: [Synth 8-3848] Net fpga_cpu_rd_empty in module/entity webserver_cpu_top does not have driver. [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/webserver_cpu_top.v:149]
+WARNING: [Synth 8-3848] Net fpga_cpu_rd_rpkt_len in module/entity webserver_cpu_top does not have driver. [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/webserver_cpu_top.v:148]
+WARNING: [Synth 8-3848] Net fpga_cpu_rd_rdata in module/entity webserver_cpu_top does not have driver. [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/webserver_cpu_top.v:148]
+WARNING: [Synth 8-3848] Net fpga_cpu_rd_reop_pre in module/entity webserver_cpu_top does not have driver. [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/webserver_cpu_top.v:149]
+WARNING: [Synth 8-3848] Net fpga_cpu_wr_full in module/entity webserver_cpu_top does not have driver. [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/rtl/webserver_cpu_top.v:149]
+WARNING: [Synth 8-3917] design webserver_cpu_top has port Eth0_MDC driven by constant 0
+WARNING: [Synth 8-7129] Port sleep in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port regcea in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port injectsbiterra in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port injectdbiterra in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clkb in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port regceb in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port injectsbiterrb in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port injectdbiterrb in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port address_a[12] in module single_clock_true_dual_port_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port address_a[11] in module single_clock_true_dual_port_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port address_b[12] in module single_clock_true_dual_port_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port address_b[11] in module single_clock_true_dual_port_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rv_instr in module riscv32intfbridge is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcpi_wr in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcpi_rd[31] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcpi_rd[30] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcpi_rd[29] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcpi_rd[28] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcpi_rd[27] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcpi_rd[26] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcpi_rd[25] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcpi_rd[24] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcpi_rd[23] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcpi_rd[22] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcpi_rd[21] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcpi_rd[20] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcpi_rd[19] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcpi_rd[18] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcpi_rd[17] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcpi_rd[16] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcpi_rd[15] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcpi_rd[14] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcpi_rd[13] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcpi_rd[12] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcpi_rd[11] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcpi_rd[10] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcpi_rd[9] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcpi_rd[8] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcpi_rd[7] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcpi_rd[6] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcpi_rd[5] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcpi_rd[4] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcpi_rd[3] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcpi_rd[2] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcpi_rd[1] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcpi_rd[0] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcpi_wait in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcpi_ready in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port irq[31] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port irq[30] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port irq[29] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port irq[28] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port irq[27] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port irq[26] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port irq[25] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port irq[24] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port irq[23] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port irq[22] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port irq[21] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port irq[20] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port irq[19] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port irq[18] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port irq[17] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port irq[16] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port irq[15] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port irq[14] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port irq[13] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port irq[12] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port irq[11] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port irq[10] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port irq[9] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port irq[8] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port irq[7] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port irq[6] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port irq[5] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port irq[4] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port irq[3] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port irq[2] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port irq[1] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port irq[0] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port full in module lcpu_out_uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rpkt_len[5] in module pktfifo_out_lcpu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rpkt_len[4] in module pktfifo_out_lcpu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rpkt_len[3] in module pktfifo_out_lcpu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rpkt_len[2] in module pktfifo_out_lcpu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rpkt_len[1] in module pktfifo_out_lcpu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rpkt_len[0] in module pktfifo_out_lcpu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port op_ack in module pktfifo_out_lcpu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rddata[31] in module pktfifo_out_lcpu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rddata[30] in module pktfifo_out_lcpu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rddata[29] in module pktfifo_out_lcpu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rddata[28] in module pktfifo_out_lcpu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rddata[27] in module pktfifo_out_lcpu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rddata[26] in module pktfifo_out_lcpu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rddata[25] in module pktfifo_out_lcpu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rddata[24] in module pktfifo_out_lcpu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rddata[23] in module pktfifo_out_lcpu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rddata[22] in module pktfifo_out_lcpu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rddata[21] in module pktfifo_out_lcpu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rddata[20] in module pktfifo_out_lcpu is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2336.613 ; gain = 543.684 ; free physical = 4461 ; free virtual = 10265
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2354.426 ; gain = 561.496 ; free physical = 4461 ; free virtual = 10265
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2354.426 ; gain = 561.496 ; free physical = 4461 ; free virtual = 10265
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.08 . Memory (MB): peak = 2360.363 ; gain = 0.000 ; free physical = 4461 ; free virtual = 10265
+INFO: [Netlist 29-17] Analyzing 17 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/build_xilinx/pins.xdc]
+Finished Parsing XDC File [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/build_xilinx/pins.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/build_xilinx/pins.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/webserver_cpu_top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/webserver_cpu_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/build_xilinx/timing.xdc]
+INFO: [Timing 38-2] Deriving generated clocks [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/build_xilinx/timing.xdc:6]
+Finished Parsing XDC File [/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/build_xilinx/timing.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/haitaoz/Xilinx/2024.1/Vivado/2024.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/webserver_cpu_top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/webserver_cpu_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Project 1-1714] 8 XPM XDC files have been applied to the design.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2494.207 ; gain = 0.000 ; free physical = 4437 ; free virtual = 10240
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  MMCME2_BASE => MMCME2_ADV: 1 instance 
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2494.207 ; gain = 0.000 ; free physical = 4437 ; free virtual = 10240
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2494.207 ; gain = 701.277 ; free physical = 4447 ; free virtual = 10251
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tfgg484-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2502.211 ; gain = 709.281 ; free physical = 4447 ; free virtual = 10251
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for u_riscv/\riscv_cpu_generation.u_riscv_cpu /u_instru_ram/\gen_xilinx_xpm_tdpram.xpm_bank[0].u_xpm_memory_tdpram_bank . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for u_riscv/\riscv_cpu_generation.u_riscv_cpu /u_instru_ram/\gen_xilinx_xpm_tdpram.xpm_bank[1].u_xpm_memory_tdpram_bank . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for u_riscv/\riscv_cpu_generation.u_riscv_cpu /u_instru_ram/\gen_xilinx_xpm_tdpram.xpm_bank[2].u_xpm_memory_tdpram_bank . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for u_riscv/\riscv_cpu_generation.u_riscv_cpu /u_instru_ram/\gen_xilinx_xpm_tdpram.xpm_bank[3].u_xpm_memory_tdpram_bank . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for u_riscv/\riscv_cpu_generation.u_riscv_cpu /u_instru_ram/\gen_xilinx_xpm_tdpram.xpm_bank[4].u_xpm_memory_tdpram_bank . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for u_riscv/\riscv_cpu_generation.u_riscv_cpu /u_instru_ram/\gen_xilinx_xpm_tdpram.xpm_bank[5].u_xpm_memory_tdpram_bank . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for u_riscv/\riscv_cpu_generation.u_riscv_cpu /u_instru_ram/\gen_xilinx_xpm_tdpram.xpm_bank[6].u_xpm_memory_tdpram_bank . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for u_riscv/\riscv_cpu_generation.u_riscv_cpu /u_instru_ram/\gen_xilinx_xpm_tdpram.xpm_bank[7].u_xpm_memory_tdpram_bank . (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2502.211 ; gain = 709.281 ; free physical = 4446 ; free virtual = 10250
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'cur_state_reg' in module 'uart_in_pktfifo'
+INFO: [Synth 8-802] inferred FSM for state register 'cur_state_reg' in module 'pktfifo_out_lcpu'
+INFO: [Synth 8-802] inferred FSM for state register 'mem_state_reg' in module 'picorv32'
+INFO: [Synth 8-802] inferred FSM for state register 'cur_state_reg' in module 'lcpu_merge'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+            search_start |                               01 |                               01
+            move_op_data |                               10 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'cur_state_reg' in module 'uart_in_pktfifo'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+                    idle |                              001 |                              001
+                 pop_pkt |                              010 |                              010
+               launch_op |                              100 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'cur_state_reg' in module 'pktfifo_out_lcpu'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE2 |                               00 |                               00
+                 iSTATE0 |                               01 |                               10
+                  iSTATE |                               10 |                               01
+                 iSTATE1 |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'mem_state_reg' using encoding 'sequential' in module 'picorv32'
+INFO: [Synth 8-3971] The signal "xpm_memory_base:/gen_wr_b.gen_byte_narrow.for_mem_cols[1].mem_reg" was recognized as a true dual port RAM template.
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+                    idle |                              001 |                              001
+              sta_lcpu_1 |                              010 |                              010
+              sta_lcpu_2 |                              100 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'cur_state_reg' in module 'lcpu_merge'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2502.211 ; gain = 709.281 ; free physical = 4433 ; free virtual = 10239
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 7     
+	   3 Input   32 Bit       Adders := 1     
+	   2 Input   31 Bit       Adders := 2     
+	   4 Input   30 Bit       Adders := 2     
+	   2 Input   30 Bit       Adders := 1     
+	   2 Input   16 Bit       Adders := 2     
+	   3 Input   13 Bit       Adders := 2     
+	   2 Input   12 Bit       Adders := 6     
+	   2 Input    8 Bit       Adders := 1     
+	   2 Input    7 Bit       Adders := 1     
+	   2 Input    6 Bit       Adders := 1     
+	   2 Input    5 Bit       Adders := 4     
+	   2 Input    4 Bit       Adders := 13    
+	   2 Input    3 Bit       Adders := 12    
+	   2 Input    2 Bit       Adders := 6     
+	   4 Input    1 Bit       Adders := 6     
+	   8 Input    1 Bit       Adders := 6     
+	  10 Input    1 Bit       Adders := 6     
+	  14 Input    1 Bit       Adders := 2     
+	  12 Input    1 Bit       Adders := 2     
+	   9 Input    1 Bit       Adders := 14    
+	  13 Input    1 Bit       Adders := 4     
+	  11 Input    1 Bit       Adders := 2     
+	   7 Input    1 Bit       Adders := 18    
+	   5 Input    1 Bit       Adders := 20    
+	   3 Input    1 Bit       Adders := 28    
+	   2 Input    1 Bit       Adders := 2     
+	   6 Input    1 Bit       Adders := 8     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
+	   2 Input      1 Bit         XORs := 55    
++---Registers : 
+	               36 Bit    Registers := 1     
+	               32 Bit    Registers := 109   
+	               31 Bit    Registers := 2     
+	               30 Bit    Registers := 2     
+	               26 Bit    Registers := 36    
+	               16 Bit    Registers := 3     
+	               13 Bit    Registers := 1     
+	               12 Bit    Registers := 12    
+	               10 Bit    Registers := 22    
+	                9 Bit    Registers := 2     
+	                8 Bit    Registers := 53    
+	                7 Bit    Registers := 2     
+	                6 Bit    Registers := 1     
+	                5 Bit    Registers := 8     
+	                4 Bit    Registers := 34    
+	                3 Bit    Registers := 48    
+	                2 Bit    Registers := 10    
+	                1 Bit    Registers := 198   
++---RAMs : 
+	              32K Bit	(4096 X 8 bit)          RAMs := 3     
+	               8K Bit	(256 X 32 bit)          RAMs := 8     
+	               72 Bit	(8 X 9 bit)          RAMs := 1     
+	               36 Bit	(4 X 9 bit)          RAMs := 1     
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 169   
+	   4 Input   32 Bit        Muxes := 11    
+	   3 Input   32 Bit        Muxes := 4     
+	   5 Input   32 Bit        Muxes := 1     
+	   6 Input   32 Bit        Muxes := 1     
+	   2 Input   30 Bit        Muxes := 2     
+	   2 Input   16 Bit        Muxes := 1     
+	   4 Input   10 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 23    
+	   4 Input    8 Bit        Muxes := 1     
+	   7 Input    8 Bit        Muxes := 1     
+	   2 Input    6 Bit        Muxes := 1     
+	   3 Input    5 Bit        Muxes := 2     
+	   2 Input    5 Bit        Muxes := 19    
+	   5 Input    5 Bit        Muxes := 4     
+	   8 Input    5 Bit        Muxes := 2     
+	   4 Input    5 Bit        Muxes := 3     
+	   2 Input    4 Bit        Muxes := 9     
+	  32 Input    4 Bit        Muxes := 1     
+	   4 Input    4 Bit        Muxes := 4     
+	   5 Input    4 Bit        Muxes := 1     
+	   3 Input    4 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 15    
+	   3 Input    3 Bit        Muxes := 1     
+	   4 Input    3 Bit        Muxes := 2     
+	   5 Input    3 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 10    
+	   3 Input    2 Bit        Muxes := 1     
+	   4 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 220   
+	   3 Input    1 Bit        Muxes := 20    
+	   4 Input    1 Bit        Muxes := 31    
+	   8 Input    1 Bit        Muxes := 5     
+	   5 Input    1 Bit        Muxes := 5     
+	   7 Input    1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-3917] design webserver_cpu_top has port Eth0_MDC driven by constant 0
+INFO: [Synth 8-3971] The signal "xpm_memory_tdpram:/xpm_memory_base_inst/gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg" was recognized as a true dual port RAM template.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 2502.211 ; gain = 709.281 ; free physical = 4441 ; free virtual = 10258
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping Report (see note below)
++----------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name                             | RTL Object                                                                                                                                      | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++----------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|u_cpu_channel                           | u_package_fifo_cpu_rd/none_blk_mode.data_ram_dual.u_data_ram/gen_inferred_ram.gen_port_a_aligned.ram_reg                                        | 4 K x 8(NO_CHANGE)     | W |   | 4 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 0      | 1      | 
+|u_cpu_channel                           | u_package_fifo_cpu_wr/none_blk_mode.data_ram_dual.u_data_ram/gen_inferred_ram.gen_port_a_aligned.ram_reg                                        | 4 K x 8(NO_CHANGE)     | W |   | 4 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 0      | 1      | 
+|u_riscv                                 | lcpu_real.u_cpu/gen_uart.u_uart_lcpu_top/u_uart_lcpu/u_pkt_fifo/blk_mode.data_ram_single.u_data_ram/gen_inferred_ram.gen_port_a_aligned.ram_reg | 4096 x 8(READ_FIRST)   | W |   | 4096 x 8(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|xpm_memory_tdpram:/xpm_memory_base_inst | gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg                                                                                                | 256 x 32(READ_FIRST)   | W | R | 256 x 32(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 
+|xpm_memory_tdpram:/xpm_memory_base_inst | gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg                                                                                                | 256 x 32(READ_FIRST)   | W | R | 256 x 32(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 
+|xpm_memory_tdpram:/xpm_memory_base_inst | gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg                                                                                                | 256 x 32(READ_FIRST)   | W | R | 256 x 32(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 
+|xpm_memory_tdpram:/xpm_memory_base_inst | gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg                                                                                                | 256 x 32(READ_FIRST)   | W | R | 256 x 32(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 
+|xpm_memory_tdpram:/xpm_memory_base_inst | gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg                                                                                                | 256 x 32(READ_FIRST)   | W | R | 256 x 32(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 
+|xpm_memory_tdpram:/xpm_memory_base_inst | gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg                                                                                                | 256 x 32(READ_FIRST)   | W | R | 256 x 32(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 
+|xpm_memory_tdpram:/xpm_memory_base_inst | gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg                                                                                                | 256 x 32(READ_FIRST)   | W | R | 256 x 32(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 
+|xpm_memory_tdpram:/xpm_memory_base_inst | gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg                                                                                                | 256 x 32(READ_FIRST)   | W | R | 256 x 32(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 
++----------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+
+Distributed RAM: Preliminary Mapping Report (see note below)
++------------+----------------------------------------------------------------------------------------------------------------------+-----------+----------------------+-------------+
+|Module Name | RTL Object                                                                                                           | Inference | Size (Depth x Width) | Primitives  | 
++------------+----------------------------------------------------------------------------------------------------------------------+-----------+----------------------+-------------+
+|u_gmii2mac  | u_mac_top/u_mac_tx/u_fix_delay/delay_using_ram_generation.u_dly_data_buf/gen_inferred_ram.gen_port_a_nonbyte.ram_reg | Implied   | 4 x 9                | RAM32M x 2  | 
+|u_gmii2mac  | u_eth_presemble/u_fix_delay/delay_using_ram_generation.u_dly_data_buf/gen_inferred_ram.gen_port_a_nonbyte.ram_reg    | Implied   | 8 x 9                | RAM32M x 2  | 
++------------+----------------------------------------------------------------------------------------------------------------------+-----------+----------------------+-------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 2502.211 ; gain = 709.281 ; free physical = 4452 ; free virtual = 10268
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 2502.211 ; gain = 709.281 ; free physical = 4450 ; free virtual = 10266
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping Report
++----------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name                             | RTL Object                                                                                                                                      | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++----------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|u_cpu_channel                           | u_package_fifo_cpu_rd/none_blk_mode.data_ram_dual.u_data_ram/gen_inferred_ram.gen_port_a_aligned.ram_reg                                        | 4 K x 8(NO_CHANGE)     | W |   | 4 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 0      | 1      | 
+|u_cpu_channel                           | u_package_fifo_cpu_wr/none_blk_mode.data_ram_dual.u_data_ram/gen_inferred_ram.gen_port_a_aligned.ram_reg                                        | 4 K x 8(NO_CHANGE)     | W |   | 4 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 0      | 1      | 
+|u_riscv                                 | lcpu_real.u_cpu/gen_uart.u_uart_lcpu_top/u_uart_lcpu/u_pkt_fifo/blk_mode.data_ram_single.u_data_ram/gen_inferred_ram.gen_port_a_aligned.ram_reg | 4096 x 8(READ_FIRST)   | W |   | 4096 x 8(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|xpm_memory_tdpram:/xpm_memory_base_inst | gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg                                                                                                | 256 x 32(READ_FIRST)   | W | R | 256 x 32(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 
+|xpm_memory_tdpram:/xpm_memory_base_inst | gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg                                                                                                | 256 x 32(READ_FIRST)   | W | R | 256 x 32(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 
+|xpm_memory_tdpram:/xpm_memory_base_inst | gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg                                                                                                | 256 x 32(READ_FIRST)   | W | R | 256 x 32(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 
+|xpm_memory_tdpram:/xpm_memory_base_inst | gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg                                                                                                | 256 x 32(READ_FIRST)   | W | R | 256 x 32(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 
+|xpm_memory_tdpram:/xpm_memory_base_inst | gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg                                                                                                | 256 x 32(READ_FIRST)   | W | R | 256 x 32(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 
+|xpm_memory_tdpram:/xpm_memory_base_inst | gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg                                                                                                | 256 x 32(READ_FIRST)   | W | R | 256 x 32(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 
+|xpm_memory_tdpram:/xpm_memory_base_inst | gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg                                                                                                | 256 x 32(READ_FIRST)   | W | R | 256 x 32(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 
+|xpm_memory_tdpram:/xpm_memory_base_inst | gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg                                                                                                | 256 x 32(READ_FIRST)   | W | R | 256 x 32(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 
++----------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+
+Distributed RAM: Final Mapping Report
++------------+----------------------------------------------------------------------------------------------------------------------+-----------+----------------------+-------------+
+|Module Name | RTL Object                                                                                                           | Inference | Size (Depth x Width) | Primitives  | 
++------------+----------------------------------------------------------------------------------------------------------------------+-----------+----------------------+-------------+
+|u_gmii2mac  | u_mac_top/u_mac_tx/u_fix_delay/delay_using_ram_generation.u_dly_data_buf/gen_inferred_ram.gen_port_a_nonbyte.ram_reg | Implied   | 4 x 9                | RAM32M x 2  | 
+|u_gmii2mac  | u_eth_presemble/u_fix_delay/delay_using_ram_generation.u_dly_data_buf/gen_inferred_ram.gen_port_a_nonbyte.ram_reg    | Implied   | 8 x 9                | RAM32M x 2  | 
++------------+----------------------------------------------------------------------------------------------------------------------+-----------+----------------------+-------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance u_riscv/riscv_cpu_generation.u_riscv_cpu/u_instru_ram/gen_xilinx_xpm_tdpram.xpm_bank[0].u_xpm_memory_tdpram_bank/xpm_memory_base_inst/gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_riscv/riscv_cpu_generation.u_riscv_cpu/u_instru_ram/gen_xilinx_xpm_tdpram.xpm_bank[0].u_xpm_memory_tdpram_bank/xpm_memory_base_inst/gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_riscv/riscv_cpu_generation.u_riscv_cpu/u_instru_ram/gen_xilinx_xpm_tdpram.xpm_bank[1].u_xpm_memory_tdpram_bank/xpm_memory_base_inst/gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_riscv/riscv_cpu_generation.u_riscv_cpu/u_instru_ram/gen_xilinx_xpm_tdpram.xpm_bank[1].u_xpm_memory_tdpram_bank/xpm_memory_base_inst/gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_riscv/riscv_cpu_generation.u_riscv_cpu/u_instru_ram/gen_xilinx_xpm_tdpram.xpm_bank[2].u_xpm_memory_tdpram_bank/xpm_memory_base_inst/gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_riscv/riscv_cpu_generation.u_riscv_cpu/u_instru_ram/gen_xilinx_xpm_tdpram.xpm_bank[2].u_xpm_memory_tdpram_bank/xpm_memory_base_inst/gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_riscv/riscv_cpu_generation.u_riscv_cpu/u_instru_ram/gen_xilinx_xpm_tdpram.xpm_bank[3].u_xpm_memory_tdpram_bank/xpm_memory_base_inst/gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_riscv/riscv_cpu_generation.u_riscv_cpu/u_instru_ram/gen_xilinx_xpm_tdpram.xpm_bank[3].u_xpm_memory_tdpram_bank/xpm_memory_base_inst/gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_riscv/riscv_cpu_generation.u_riscv_cpu/u_instru_ram/gen_xilinx_xpm_tdpram.xpm_bank[4].u_xpm_memory_tdpram_bank/xpm_memory_base_inst/gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_riscv/riscv_cpu_generation.u_riscv_cpu/u_instru_ram/gen_xilinx_xpm_tdpram.xpm_bank[4].u_xpm_memory_tdpram_bank/xpm_memory_base_inst/gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_riscv/riscv_cpu_generation.u_riscv_cpu/u_instru_ram/gen_xilinx_xpm_tdpram.xpm_bank[5].u_xpm_memory_tdpram_bank/xpm_memory_base_inst/gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_riscv/riscv_cpu_generation.u_riscv_cpu/u_instru_ram/gen_xilinx_xpm_tdpram.xpm_bank[5].u_xpm_memory_tdpram_bank/xpm_memory_base_inst/gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_riscv/riscv_cpu_generation.u_riscv_cpu/u_instru_ram/gen_xilinx_xpm_tdpram.xpm_bank[6].u_xpm_memory_tdpram_bank/xpm_memory_base_inst/gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_riscv/riscv_cpu_generation.u_riscv_cpu/u_instru_ram/gen_xilinx_xpm_tdpram.xpm_bank[6].u_xpm_memory_tdpram_bank/xpm_memory_base_inst/gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_riscv/riscv_cpu_generation.u_riscv_cpu/u_instru_ram/gen_xilinx_xpm_tdpram.xpm_bank[7].u_xpm_memory_tdpram_bank/xpm_memory_base_inst/gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_riscv/riscv_cpu_generation.u_riscv_cpu/u_instru_ram/gen_xilinx_xpm_tdpram.xpm_bank[7].u_xpm_memory_tdpram_bank/xpm_memory_base_inst/gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_cpu_channel/u_package_fifo_cpu_rd/none_blk_mode.data_ram_dual.u_data_ram/gen_inferred_ram.gen_port_a_aligned.ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_cpu_channel/u_package_fifo_cpu_wr/none_blk_mode.data_ram_dual.u_data_ram/gen_inferred_ram.gen_port_a_aligned.ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_riscv/lcpu_real.u_cpu/gen_uart.u_uart_lcpu_top/u_uart_lcpu/u_pkt_fifo/blk_mode.data_ram_single.u_data_ram/gen_inferred_ram.gen_port_a_aligned.ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 2502.211 ; gain = 709.281 ; free physical = 4438 ; free virtual = 10255
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 2502.211 ; gain = 709.281 ; free physical = 4441 ; free virtual = 10258
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 2502.211 ; gain = 709.281 ; free physical = 4441 ; free virtual = 10258
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 2502.211 ; gain = 709.281 ; free physical = 4438 ; free virtual = 10255
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 2502.211 ; gain = 709.281 ; free physical = 4438 ; free virtual = 10255
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 2502.211 ; gain = 709.281 ; free physical = 4440 ; free virtual = 10256
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 2502.211 ; gain = 709.281 ; free physical = 4440 ; free virtual = 10256
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++------------------+-----------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name       | RTL Name                                                              | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++------------------+-----------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|webserver_cpu_top | u_cpu_channel/u_package_fifo_cpu_rd/none_blk_mode.ram_data_a_r_reg[7] | 5      | 8     | YES          | NO                 | YES               | 8      | 0       | 
++------------------+-----------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+------------+------+
+|      |Cell        |Count |
++------+------------+------+
+|1     |BUFG        |     7|
+|2     |CARRY4      |   190|
+|3     |IDDR        |     5|
+|4     |IDELAYCTRL  |     1|
+|5     |IDELAYE2    |     5|
+|6     |LUT1        |    89|
+|7     |LUT2        |   483|
+|8     |LUT3        |   343|
+|9     |LUT4        |   596|
+|10    |LUT5        |   552|
+|11    |LUT6        |  1955|
+|12    |MMCME2_BASE |     1|
+|13    |MUXF7       |   312|
+|14    |MUXF8       |    47|
+|15    |ODDR        |     6|
+|16    |RAM32M      |     4|
+|17    |RAMB18E1    |     1|
+|18    |RAMB36E1    |    10|
+|20    |SRL16E      |     8|
+|21    |FDCE        |  2271|
+|22    |FDPE        |    16|
+|23    |FDRE        |  2839|
+|24    |FDSE        |    30|
+|25    |IBUF        |     9|
+|26    |OBUF        |    13|
++------+------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 2502.211 ; gain = 709.281 ; free physical = 4440 ; free virtual = 10257
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 83 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 2502.211 ; gain = 569.500 ; free physical = 4438 ; free virtual = 10257
+Synthesis Optimization Complete : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 2502.219 ; gain = 709.281 ; free physical = 4438 ; free virtual = 10257
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.05 . Memory (MB): peak = 2502.219 ; gain = 0.000 ; free physical = 4733 ; free virtual = 10551
+INFO: [Netlist 29-17] Analyzing 581 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2558.238 ; gain = 0.000 ; free physical = 4734 ; free virtual = 10553
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 5 instances were transformed.
+  MMCME2_BASE => MMCME2_ADV: 1 instance 
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 4 instances
+
+Synth Design complete | Checksum: e4458a99
+INFO: [Common 17-83] Releasing license: Synthesis
+178 Infos, 240 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:40 ; elapsed = 00:00:40 . Memory (MB): peak = 2558.238 ; gain = 1107.316 ; free physical = 4738 ; free virtual = 10554
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2048.501; main = 1716.598; forked = 392.609
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3545.699; main = 2558.242; forked = 1043.484
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2582.250 ; gain = 0.000 ; free physical = 4734 ; free virtual = 10552
+INFO: [Common 17-1381] The checkpoint '/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/build_xilinx/RiscV_WebSoC.runs/synth_1/webserver_cpu_top.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file webserver_cpu_top_utilization_synth.rpt -pb webserver_cpu_top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Jul 28 09:11:20 2026...

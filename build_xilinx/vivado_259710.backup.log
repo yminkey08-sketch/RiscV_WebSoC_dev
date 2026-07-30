@@ -1,0 +1,58 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Mon Jul 27 22:22:42 2026
+# Process ID: 259710
+# Current directory: /home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/build_xilinx
+# Command line: vivado -mode tcl -source /tmp/prog2.tcl
+# Log file: /home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/build_xilinx/vivado.log
+# Journal file: /home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/build_xilinx/vivado.jou
+# Running On        :haitaoz-pc
+# Platform          :Ubuntu
+# Operating System  :Ubuntu 26.04 LTS
+# Processor Detail  :AMD Ryzen 7 5800H with Radeon Graphics
+# CPU Frequency     :4192.631 MHz
+# CPU Physical cores:8
+# CPU Logical cores :16
+# Host memory       :13954 MB
+# Swap memory       :4294 MB
+# Total Virtual     :18249 MB
+# Available Virtual :10517 MB
+#-----------------------------------------------------------
+source /tmp/prog2.tcl
+# open_hw
+WARNING: 'open_hw' is deprecated, please use 'open_hw_manager' instead.
+# connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:0
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+******** Xilinx cs_server v2024.1.0
+  ****** Build date   : Apr 27 2024-09:40:49
+    **** Build number : 2024.1.1714182049
+      ** Copyright 2017-2022 Xilinx, Inc. All Rights Reserved.
+      ** Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+
+
+
+# set t [get_hw_targets]
+# current_hw_target $t
+# open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/240705151626
+# set d [get_hw_devices]
+# set_property PROGRAM.FILE {/home/haitaoz/work/FPGA_Prj/RiscV_WebSoC/build_xilinx/RiscV_WebSoC.bit} $d
+# program_hw_devices $d
+INFO: [Labtools 27-3164] End of startup status: HIGH
+# puts "DONE"
+DONE
+# close_hw_target
+INFO: [Labtoolstcl 44-464] Closing hw_target localhost:3121/xilinx_tcf/Digilent/240705151626
+# disconnect_hw_server
+# close_hw
+WARNING: 'close_hw' is deprecated, please use 'close_hw_manager' instead.
+# exit
+INFO: [Common 17-206] Exiting Vivado at Mon Jul 27 22:22:53 2026...

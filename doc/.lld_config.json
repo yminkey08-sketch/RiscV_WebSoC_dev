@@ -1,0 +1,9 @@
+{
+  "产品名称": "RiscV WebSoC",
+  "文档编号": "ED002R01",
+  "密级": "内部",
+  "RTL代码路径": "RiscV_WebSoC/rtl/",
+  "顶层模块名": "webserver_cpu_top",
+  "生成日期": "2026-07-27",
+  "输出文档路径": "doc/RiscV_WebSoC逻辑设计方案(ED002R01).md"
+}
